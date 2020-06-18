@@ -17,6 +17,8 @@ export interface Action {
 
 function checkGameState(state: State, allSteps: Array<Array<number>>, winCombination: Array<Array<{row: number; column: number}>>, whome: number): void {
     let flag: boolean;
+
+    // Find the combination of three equivalent symbol (2 or 1)
     for(let i: number = 0; i < winCombination.length; i++) {
         flag = true;
         for(let j: number = 0; j < winCombination[i].length; j++) {
@@ -28,9 +30,13 @@ function checkGameState(state: State, allSteps: Array<Array<number>>, winCombina
         if(flag) break;
     }
 
+    // There is always a winner
+    // When we win
     if(flag && whome === 1) {
         alert('You are win');
         state.isComplete = true;
+
+        // When we looose
     } else if(flag && whome === 2) {
         alert('You are loose');
         state.isComplete = true;
