@@ -7,6 +7,6 @@ That's all
 
 ## List of npm command
 1. **npm run start** - launch webpack-dev-server
-2. **npm run build** - create the production version of Philipp Pizza web application 
-3. **npm run dev** - create the developer version of Philipp Pizza web application 
+2. **npm run build** - create the production version of ticTac web application 
+3. **npm run dev** - create the developer version of TicTac web application 
 4. **npm run watch** - watch for changing of content of /src/ folder
