@@ -1,4 +1,4 @@
-# How to deploy *PhilippPizza* web application at server
+# How to deploy *TicTac* web application at server
 
 1. The command **npm run build** build the production version in folder /dist/
 2. Put the content  of /dist/ folder to the root folder of server
