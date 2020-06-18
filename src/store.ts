@@ -36,6 +36,15 @@ function checkGameState(state: State, allSteps: Array<Array<number>>, winCombina
     } else if(flag && whome === 2) {
         alert('You are loose');
         state.isComplete = true;
+        state.whome = 'computer que';
+        state.allSteps = [
+            [0, 0, 0], 
+            [0, 0, 0],
+            [0, 0, 0]
+        ];
+        state.currentUserCell = [-1, -1];
+        state.currentComputerCell = [-1, -1];
+        state.userSteps = [];
     } else if(!isNull) {
         alert('There isn\'t a winner');
         state.isComplete = true;
