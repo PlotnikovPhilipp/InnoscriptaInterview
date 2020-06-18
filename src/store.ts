@@ -17,11 +17,9 @@ export interface Action {
 
 function checkGameState(state: State, allSteps: Array<Array<number>>, winCombination: Array<Array<{row: number; column: number}>>, whome: number): void {
     let flag: boolean;
-    let isNull: boolean = false;
     for(let i: number = 0; i < winCombination.length; i++) {
         flag = true;
         for(let j: number = 0; j < winCombination[i].length; j++) {
-            if(allSteps[winCombination[i][j].row][winCombination[i][j].column] === 0) isNull = true;
             if(allSteps[winCombination[i][j].row][winCombination[i][j].column] !== whome) {
                 flag = false;
                 break;
@@ -45,9 +43,6 @@ function checkGameState(state: State, allSteps: Array<Array<number>>, winCombina
         state.currentUserCell = [-1, -1];
         state.currentComputerCell = [-1, -1];
         state.userSteps = [];
-    } else if(!isNull) {
-        alert('There isn\'t a winner');
-        state.isComplete = true;
     }
 }
 
